@@ -1,3 +1,10 @@
 language: generic
 
 os: linux
+before_install: 
+  - pip install codecov 
+  - pip install coverage
+install: true
+
+after_success:
+  - codecov 
